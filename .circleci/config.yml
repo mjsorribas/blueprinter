@@ -14,38 +14,38 @@ steps: &steps_spec
             command: bundle exec rake benchmarks
 
 jobs:
-  ruby-2_2:
+  ruby-2_4:
     parameters:
       benchmark:
         type: boolean
         default: false
     steps: *steps_spec
     docker:
-      - image: ruby:2.2
-  ruby-2_3:
-    parameters:
-      benchmark:
-        type: boolean
-        default: true
-    steps: *steps_spec
-    docker:
-      - image: ruby:2.3
-  ruby-2_4:
-    parameters:
-      benchmark:
-        type: boolean
-        default: true
-    steps: *steps_spec
-    docker:
       - image: ruby:2.4
-  ruby-2_5:
+  ruby-2_6:
     parameters:
       benchmark:
         type: boolean
         default: true
     steps: *steps_spec
     docker:
-      - image: ruby:2.5
+      - image: ruby:2.6
+  ruby-2_7:
+    parameters:
+      benchmark:
+        type: boolean
+        default: true
+    steps: *steps_spec
+    docker:
+      - image: ruby:2.7
+  ruby-3_2:
+    parameters:
+      benchmark:
+        type: boolean
+        default: true
+    steps: *steps_spec
+    docker:
+      - image: ruby:3.2
   release-gem:
     steps:
       - checkout
@@ -70,20 +70,20 @@ jobs:
             echo "Attempting to release version '$GEM_VERSION' of Blueprinter..."
             bundle exec rake release || true # Don't fail when deploy does not take place
     docker:
-      - image: ruby:2.5
+      - image: ruby:2.7
 
 workflows:
   version: 2
   test:
     jobs:
-      - ruby-2_2
-      - ruby-2_3
       - ruby-2_4
-      - ruby-2_5
+      - ruby-2_6
+      - ruby-2_7
+      - ruby-3_2
   release:
     jobs:
       - release-gem:
           filters:
             branches:
               only:
-                - master
+                - develop
