@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rake"
   s.add_development_dependency "activerecord", "~> 5.2.8.1"
   s.add_development_dependency "rspec", ">= 3.12"
+  s.add_development_dependency "rspec-expectations", ">= 3.12.3"
   # rspec-rails >= 4.0.0 does not support ruby 2.2
   s.add_development_dependency 'rspec-rails', '>= 4.0.0'
   s.add_development_dependency "sqlite3", '~> 1.6.2'
