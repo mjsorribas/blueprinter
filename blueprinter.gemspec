@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*", "CHANGELOG.md", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.required_ruby_version = '>= 2.2.2'
+  s.required_ruby_version = '>= 2.7.8'
 
   s.add_development_dependency "factory_bot"
   s.add_development_dependency "nokogiri", ">= 1.8.2"
@@ -25,9 +25,9 @@ Gem::Specification.new do |s|
   s.add_development_dependency "pry"
   s.add_development_dependency "rake"
   s.add_development_dependency "activerecord", "~> 5.1.2"
-  s.add_development_dependency "rspec", "~> 3.7"
+  s.add_development_dependency "rspec", ">= 3.12"
   # rspec-rails >= 4.0.0 does not support ruby 2.2
-  s.add_development_dependency 'rspec-rails', '< 4.0.0'
+  s.add_development_dependency 'rspec-rails', '>= 4.0.0'
   s.add_development_dependency "sqlite3", '~> 1.3.6'
   s.add_development_dependency "yard", "~> 0.9.11"
   s.add_development_dependency "ammeter", "~> 1.1.4"
