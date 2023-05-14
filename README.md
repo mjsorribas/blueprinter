@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/procore/blueprinter.svg?style=svg)](https://circleci.com/gh/procore/blueprinter)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/mjsorribas/blueprinter/tree/develop.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/mjsorribas/blueprinter/tree/develop)
 [![Gem Version](https://badge.fury.io/rb/blueprinter.svg)](https://badge.fury.io/rb/blueprinter)
 [![Gitter chat](https://badges.gitter.im/procore/blueprinter.svg)](https://gitter.im/blueprinter-gem/community)
 
